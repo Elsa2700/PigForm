@@ -1,0 +1,169 @@
+h1{
+    font-size: 40px;
+    text-align: center;
+    margin: 30px;
+}
+.form-frame{
+    font-family: sans-serif;
+    font-size: 27px;
+    font-style: normal;
+    font-weight:500;
+    line-height: 40px;
+    letter-spacing: 0em;
+    padding: 30px;
+    margin: 10px;
+    background-color: rgba(186, 192, 182, 0.342);
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+label{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    font-weight:600;
+}
+input{
+    height: 50px;
+    border-radius:10px;
+    font-size: 18px;
+}
+.form-row1 input{
+    margin-left: 10px;
+}
+
+.form-row2{
+    width: 100%;
+}
+
+.form-row3-1{
+    margin-top: 20px;
+}
+.form-row3-1-name{
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+}
+.form-row3-2{
+    font-size: 22px;
+    line-height: 50px;
+    font-weight:200;
+}
+.form-row2 input{
+    font-size: 20px;
+    width: 300px;
+}
+.star{
+    color:rgb(228, 31, 31);
+}
+
+.formSumitBasic input{
+    width: 200px;
+    cursor: pointer;
+    margin-top: 30px;
+    font-size:25px;
+    padding: 10px;
+    height:fit-content;
+    font-weight: bold;
+    background-color: rgb(45, 94, 73);
+    color: cornsilk;
+}
+.formSumit button{
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-left: 40px;
+    font-size:25px;
+    padding: 10px;
+    height:fit-content;
+    font-weight: bold;
+    background-color: rgb(245, 213, 31);
+    color: rgb(19, 15, 2);
+
+}
+
+
+.myForm{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    width: 95%;
+    margin: 10px;
+    flex-wrap: wrap;
+}
+table,td {
+    padding: 20px;
+    font-size:25px;
+    border: 1px solid #333;
+}
+
+thead,
+tfoot {
+    background-color: #333;
+    color: #fff;
+    height: 80px;
+}
+.Statistic{
+    border-radius: 10px;
+    font-size:30px;
+    padding: 20px;
+    height:fit-content;
+    font-weight: bold;
+
+}
+
+.nav-frame button{
+    margin: 10px;
+    padding: 15px;
+    font-family: sans-serif;
+    font-weight:bolder;
+    font-size: 24px;
+    font-style: normal;
+    letter-spacing: 0em;
+    border-radius: 40px;
+    background-color: rgb(236, 142, 18);
+    color: rgb(239, 240, 226);
+    cursor: pointer;
+} 
+.nav-frame button:hover{
+    background-color: rgb(28, 207, 163);
+}
+.Result{
+    margin: 10px;
+    padding: 15px;
+    font-family: sans-serif;
+    font-weight:bolder;
+    font-size: 24px;
+    font-style: normal;
+    letter-spacing: 0em;
+    line-height:2em;
+}
+
+.Result1{
+    border:1px slategray solid;
+    padding: 10px;
+    margin: 10px;
+}
+.Result1 h2{
+    font-size: 30px;
+    background-color: rgba(112, 128, 144, 0.164);
+    text-align: center;
+    padding: 10px;
+}
+.HomePageResult{
+    display: none;
+}
+
+.Result1 .ans{
+    background-color: rgba(216, 196, 191, 0.253);
+    color: rgb(128, 103, 128);
+}
+.Result2{
+    border: 1.5px dashed gray;
+    margin-top: 20px;
+    padding: 10px;
+}
