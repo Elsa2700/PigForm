@@ -10,47 +10,53 @@ import moment from 'moment';
 
 
 const HomePage = () => {
+    const [isSubmit, setSubmit] = useState(false);
+    const [check, setCheck] =useState(false);
+    const [checked, setChecked] =useState(false);
     const [todos, setTodos] = useState([
         {
             id: 1,
-            formContent: {
-                place: '',
-                ads: '',
-                tel: '',
-                weight: '',
-                time: ''
-            }
+            place: '',
+            ads: '',
+            tel: '',
+            bucketCount: '',
+            time: ''
         }
     ]);
     const [carForm, setCarForm] = useState([
         {
-            carId: 1,
-            basicContent: {
-                entryID: '',
-                instruction: '',
-                entrytime: '',
-                name: '',
-                carName: '',
-                startDistance: '',
-                entryDistance: '',
-                netweight: '',
-                count: ''
-            }
+            entryID: 'TYDEP-110-1-1',
+            instruction: '',
+            entrytime: '',
+            name: '',
+            carName: '',
+            startDistance: '',
+            entryDistance: '',
+            netweight: '',
+            count: ''
         }
 
     ])
 
     const [value, setValue] = useState([]);
-    
+
     const id = useRef(1);
-    
+
+
+
     const addRecordData = (carForm, todos) => {
+
+        if(Object.values(carForm[0]).includes(undefined)){
+            alert('請填寫所有基本資料');
+            window.location.reload();
+        }
         db.collection("wasteData").doc(carForm[0].entryID).set({
             basicContent: carForm,
             formContent: todos,
         })
             .then(() => {
                 console.log("Document successfully written!");
+                window.location.reload();
             })
             .catch((error) => {
                 console.error("Error writing document: ", error);
@@ -58,9 +64,20 @@ const HomePage = () => {
             });
     }
 
+    const checkYes = () =>{
+        setChecked(true);
+            addRecordData(carForm, todos);
+    }
+    const checkNo = () =>{
+        setChecked(false);
+            return
+    }
+    
+
     const handleFormButtonClick = (e) => {
         e.preventDefault();
-        addRecordData(carForm, todos);
+        setCheck(true);
+        console.log(checked);
 
         //資料庫存取
 
@@ -68,6 +85,7 @@ const HomePage = () => {
 
     const handleCarBasicButtonClick = (e) => {
         e.preventDefault();
+        setSubmit(true);
         setCarForm([{
             entryID: 'TYDEP-110-' + value.entryID1 + '-' + value.entryID2,
             instruction: value.instruction,
@@ -79,22 +97,21 @@ const HomePage = () => {
             netweight: value.netweight,
             count: value.count
         }])
-        setValue('');
+
 
     }
+
 
     const handleButtonClick = (e) => {
         e.preventDefault();
         if (id.current === 1) {
             setTodos([{
                 id: id.current,
-                formContent: {
-                    place: value.place,
-                    ads: value.ads,
-                    tel: value.tel,
-                    weight: value.weight,
-                    time: moment(value.startDate).format("YYYY-MM-DD")
-                }
+                place: value.place,
+                ads: value.ads,
+                tel: value.tel,
+                bucketCount: value.bucketCount,
+                time: moment(value.startDate).format("YYYY-MM-DD")
             }]);
 
             setValue('');
@@ -102,13 +119,12 @@ const HomePage = () => {
         } else {
             setTodos([{
                 id: id.current,
-                formContent: {
-                    place: value.place,
-                    ads: value.ads,
-                    tel: value.tel,
-                    weight: value.weight,
-                    time: moment(value.startDate).format("YYYY-MM-DD")
-                }
+                place: value.place,
+                ads: value.ads,
+                tel: value.tel,
+                bucketCount: value.bucketCount,
+                time: moment(value.startDate).format("YYYY-MM-DD")
+
             }, ...todos]);
 
             setValue('');
@@ -149,11 +165,11 @@ const HomePage = () => {
         setTodos(todos.filter(todo => todo.id !== id))
     }
 
-   
+
     return (
         <>
             <Nav />
-            <Header value={value}
+            <Header value={value} isSubmit={isSubmit}
                 handleInputCarBasicChange={handleInputCarBasicChange}
                 handleInputentrytimeChange={handleInputentrytimeChange}
                 handleCarBasicButtonClick={handleCarBasicButtonClick} />
@@ -163,7 +179,7 @@ const HomePage = () => {
                 handleDeleteTodo={handleDeleteTodo}
                 handleInputDateChange={handleInputDateChange}
             />
-            <Statistic carForm={carForm} todos={todos} handleFormButtonClick={handleFormButtonClick} />
+            <Statistic onClickYes={checkYes} onClickNo={checkNo} check={check} carForm={carForm} todos={todos} handleFormButtonClick={handleFormButtonClick} />
             <div className='HomePageResult'>
                 <Result />
             </div>

@@ -7,7 +7,10 @@ const Header = ({
     value,
     handleInputCarBasicChange,
     handleInputentrytimeChange,
-    handleCarBasicButtonClick }) => {
+    handleCarBasicButtonClick,
+    isSubmit }) => {
+
+    
 
     return (
         <>
@@ -17,14 +20,14 @@ const Header = ({
                     <label>
                         <div className='star'>*進場單號:</div>
                         <div>
-                        TYDEP-110-
-                        <span>
-                            <input value={value.entryID1} onChange={handleInputCarBasicChange} name='entryID1' type='text' placeholder='月日' required />
-                        </span>
-                        -
-                        <span>
-                            <input value={value.entryID2} onChange={handleInputCarBasicChange} name='entryID2' type='text' placeholder='序號' required />
-                        </span>
+                            TYDEP-110-
+                            <span>
+                                <input value={value.entryID1} onChange={handleInputCarBasicChange} name='entryID1' type='text' placeholder='月日' required />
+                            </span>
+                            -
+                            <span>
+                                <input value={value.entryID2} onChange={handleInputCarBasicChange} name='entryID2' type='text' placeholder='序號' required />
+                            </span>
                         </div>
                     </label>
                 </div>
@@ -76,7 +79,13 @@ const Header = ({
                         <input value={value.count} onChange={handleInputCarBasicChange} name='count' placeholder='8' type='number' />
                     </label>
                 </div>
-                <div className='formSumitBasic'><input type='submit' value='儲存基本資料' onClick={handleCarBasicButtonClick} /></div>
+                <div className='formSumitBasic'>
+                    
+                    {isSubmit?(<div><input type='submit' isSubmit={isSubmit} value='資料已更新' onClick={handleCarBasicButtonClick} /></div>):(
+                    <input type='submit' isSubmit={isSubmit} value='儲存基本資料' onClick={handleCarBasicButtonClick} />
+                )}
+                    
+                </div>
             </form>
 
             <hr />

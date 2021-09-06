@@ -5,20 +5,19 @@ import ResultData from './ResultData';
 
 const Result = () => {
     const [result, setResult] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
     const [bucketSum, setBucketSum] = useState(0);
     let bucketCount = 0;
 
 
     const getData = () => {
-        setIsLoading(true);
         db.collection("wasteData").get().then(
             (doc) => {
                 doc.docs.forEach(item => {
                     setResult([item.data()]);
                 })
-                result[0].formContent.forEach(bucket => {
-                    bucketCount += parseFloat(bucket.formContent.weight);
+                result.forEach(bucket => {
+                    bucketCount += parseFloat(bucket.weight);
                     setBucketSum(bucketCount)
                 })
             }).then(() => {
