@@ -18,7 +18,7 @@ const ResultDataBasic = ({ result, EntryID }) => {
 
     return (
         <>
-            <h1>當日進場單號</h1>
+            <h1 className='head'>當日進場單號</h1>
             <div className='Result1'>
                 <h2>單號基本資訊</h2>
                 <div>

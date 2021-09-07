@@ -26,7 +26,7 @@ const ResultData = ({ result }) => {
     return (
         <div>
             <div className='Result'>
-                <h1>當日統計結果</h1>
+                <h1 className='head'>當日統計結果</h1>
                 <div className='Result1'>
                     <h2>先趨科進場報告</h2>
                     <div>進場家次:{result.length}家</div>

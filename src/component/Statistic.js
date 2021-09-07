@@ -1,35 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import db from '../firebase/firestore';
+import React from 'react';
 
 
-const Statistic = ({ onClickYes,onClickNo, check, bucketSum, handleFormButtonClick }) => {
-    const [isLoading, setIsLoading] = useState(false);
-    const [buckets, setbuckets] = useState(0);
-
-
-    const getData = () => {
-        setIsLoading(true);
-        db.collection("wasteData").get().then(
-            (doc) => {
-                doc.docs.forEach(item => {
-                    setbuckets([item.data()]);
-                })
-
-                console.log("Cached document data:");
-                setIsLoading(false);
-
-            }).catch((error) => {
-                console.log("Error getting cached document:", error);
-            });
-
-    }
-    useEffect(() => {
-        getData();
-
-
-    }, [])
-
-
+const Statistic = ({ onClickYes,onClickNo, check, handleFormButtonClick }) => {
 
     return (
         <div className='myForm'>

@@ -14,7 +14,6 @@ const Header = ({
 
     return (
         <>
-            <h1>桃園市廚餘清運紀錄表</h1>
             <form className='form-frame'>
                 <div className='form-row1'>
                     <label>
