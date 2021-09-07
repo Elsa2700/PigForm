@@ -147,6 +147,7 @@ tfoot {
     border:1px slategray solid;
     padding: 10px;
     margin: 10px;
+    line-height: 60px;
 }
 .Result1 h2{
     font-size: 30px;
@@ -158,12 +159,42 @@ tfoot {
     display: none;
 }
 
-.Result1 .ans{
-    background-color: rgba(216, 196, 191, 0.253);
+.ans{
     color: rgb(128, 103, 128);
+    padding-left: 15px;
 }
 .Result2{
     border: 1.5px dashed gray;
     margin-top: 20px;
     padding: 10px;
+}
+.Result3{
+    border: 1.5px solid gray;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(215, 236, 135, 0.267);
+}
+
+
+.ReportCar{
+    background-color: rgba(255, 136, 0, 0.164);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+.ReportCar:hover {
+    font-size:1.1em;
+    transform: scale(1.1);
+    background-color: rgba(255, 136, 0, .4);
+}
+.blank{
+    display: flex;
+    justify-content: center;
+    margin-top: 400px;
+}
+.blank i{
+    font-size: 500px;
+    color: rgba(162, 173, 170, 0.844);
 }
