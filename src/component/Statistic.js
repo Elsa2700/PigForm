@@ -11,8 +11,8 @@ const Statistic = ({ onClickYes,onClickNo, check, handleFormButtonClick }) => {
                         <button onClick={onClickYes}>已確認</button>
                         <button onClick={onClickNo}>繼續修改不送資料</button>
                     </div>) : (
-                    <div className='formSumitBasic'>
-                        <input type='submit' value='送出表單' onClick={handleFormButtonClick} />
+                    <div>
+                        <input className='formSumitBasic' type='submit' value='送出表單' onClick={handleFormButtonClick} />
                     </div>
                 )
                 }

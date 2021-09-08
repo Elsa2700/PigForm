@@ -78,10 +78,10 @@ const Header = ({
                         <input value={value.count} onChange={handleInputCarBasicChange} name='count' placeholder='8' type='number' />
                     </label>
                 </div>
-                <div className='formSumitBasic'>
+                <div>
                     
-                    {isSubmit?(<div><input type='submit' isSubmit={isSubmit} value='資料已更新' onClick={handleCarBasicButtonClick} /></div>):(
-                    <input type='submit' isSubmit={isSubmit} value='儲存基本資料' onClick={handleCarBasicButtonClick} />
+                    {isSubmit?(<input className='formSumitBasicCheck' type='submit' isSubmit={isSubmit} value='資料已更新' />):(
+                    <input className='formSumitBasic' type='submit' isSubmit={isSubmit} value='儲存基本資料' onClick={handleCarBasicButtonClick} />
                 )}
                     
                 </div>
