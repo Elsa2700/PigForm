@@ -2,6 +2,12 @@ html,body{
     margin: 0px;
     padding: 0px;
 }
+.off{
+    opacity: 0;
+    transition: .5s;
+    -webkit-transition: .5s;
+}
+
 .nav-frame h1{
     width: auto;
     font-size: 40px;
@@ -245,11 +251,13 @@ tfoot {
 }
 
 @media screen and (max-width: 600px){
+
     body, html{
         padding: 0px;
         margin: 0px;
-        width: 95%;
+        width: 100%;
     }
+
     .nav-frame h1{
         font-size: 30px;
         
@@ -258,10 +266,11 @@ tfoot {
         width: 90%;
 
     }
+
     #root{
         margin: auto;
         padding: 0px;
-        width: 90%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -288,53 +297,54 @@ tfoot {
         flex-direction: column;
         justify-content:space-between;
     }
-    table, thead, tbody, th, td, tr {
+    .myForm table, thead, tbody, th, td, tr {
         display: block;
     }
 
-    thead tr {
+    .myForm thead tr {
         display: none;
     }
  
 
-    tr:nth-child(odd) {
+    .myForm tr:nth-child(odd) {
         background: #ccc;
+        margin-bottom: 20px;
       }
-    td {
+    .myForm td {
         /* Behave  like a "row" */
         border:1px solid rgb(177, 159, 159);
         position: relative;
         vertical-align: middle;
-        line-height: 100px;
+        line-height: 60px;
         width: 100%;
         /* border:1px solid rebeccapurple; */
 
 
     }
-    td:nth-of-type(1):before { 
+    .myForm td:nth-of-type(1):before { 
         content: "序號"; 
     }
 
-    td:nth-of-type(2):before { 
+    .myForm td:nth-of-type(2):before { 
         content: "委託單位"; 
     }
-    td:nth-of-type(3):before { 
+    .myForm td:nth-of-type(3):before { 
         content: "產源地址"; 
     }
-    td:nth-of-type(4):before { 
+    .myForm td:nth-of-type(4):before { 
         content: "產源電話"; 
     }
-    td:nth-of-type(5):before { 
+    .myForm td:nth-of-type(5):before { 
         content: "數量預估(桶數)"; 
     }
-    td:nth-of-type(6):before { 
+    .myForm td:nth-of-type(6):before { 
         content: "委託者(產源)簽章"; 
     }
-    td:nth-of-type(7):before { 
+    .myForm td:nth-of-type(7):before { 
         content: "刪除"; 
     }
 
-    td:before{
+    .myForm td input:before{
         position: absolute;
         top: -25px;
         left: 20px;
@@ -342,6 +352,10 @@ tfoot {
         white-space: nowrap;
 
     }
+    .myForm .rdtDays, .rdtPicker{
+        display: none;
+    }
+
     .myForm{
         margin: auto;
         width: 100%;
@@ -355,13 +369,14 @@ tfoot {
         width: 90%;
         border: 1px solid rgb(14, 12, 9);
     }
-    hr{
+    .myForm hr{
         width: 90%;
     }
     .formSumitBasic{
         width: 200px;
     }
     .Result{
+        width: 100%;
         margin:300px 10px 10px 10px;
 
     }

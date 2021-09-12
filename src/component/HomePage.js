@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Header from './Header';
 import Result from './Result';
 import Nav from './Nav';
@@ -13,6 +13,21 @@ const HomePage = () => {
     const [isSubmit, setSubmit] = useState(false);
     const [check, setCheck] =useState(false);
     const [checked, setChecked] =useState(false);
+    const [navScroll, setNavScroll] =useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+        console.log(window.scrollY)
+        if(window.scrollY > 200){
+            setNavScroll(true);
+        }else{
+            setNavScroll(false);
+        }
+    };
+    window.addEventListener("scroll", onScroll);
+
+  },[]);
+    
     const [todos, setTodos] = useState([
         {
             id: 1,
@@ -172,9 +187,10 @@ const HomePage = () => {
     }
 
 
+
     return (
-        <>
-            <Nav />
+        <div>
+            <Nav navScroll={navScroll}/>
             <Header value={value} isSubmit={isSubmit}
                 handleInputCarBasicChange={handleInputCarBasicChange}
                 handleInputentrytimeChange={handleInputentrytimeChange}
@@ -189,7 +205,7 @@ const HomePage = () => {
             <div className='HomePageResult'>
                 <Result />
             </div>
-        </>
+        </div>
     )
 }
 
