@@ -46,7 +46,7 @@ const HomePage = () => {
 
     const addRecordData = (carForm, todos) => {
 
-        if(Object.values(carForm[0]).includes(undefined)){
+        if(Object.values(carForm[0]).includes(undefined && '')){
             alert('請填寫所有基本資料');
             window.location.reload();
         }
@@ -55,7 +55,7 @@ const HomePage = () => {
             formContent: todos,
         })
             .then(() => {
-                console.log("Document successfully written!");
+                alert('載入成功');
                 window.location.reload();
             })
             .catch((error) => {
@@ -66,11 +66,17 @@ const HomePage = () => {
 
     const checkYes = () =>{
         setChecked(true);
+        if(Object.values(todos[0]).includes(undefined || '')){
+            alert('請填寫所有資料');
+        }else{
             addRecordData(carForm, todos);
+        }
+        
+        
     }
     const checkNo = () =>{
         setChecked(false);
-            return
+        return
     }
     
 

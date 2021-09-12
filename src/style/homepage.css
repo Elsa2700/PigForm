@@ -38,7 +38,7 @@ input{
     width: 90%;
 }
 .form-row1 input{
-    width: 300px;
+    width: 30%;
     margin-left: 10px;
 }
 
@@ -61,14 +61,14 @@ input{
 }
 .form-row2 input{
     font-size: 20px;
-    width: 300px;
+    width: 30%;
 }
 .star{
     color:rgb(228, 31, 31);
 }
 
 .formSumitBasic{
-    width: 200px;
+    width: 20%;
     cursor: pointer;
     margin-top: 30px;
     font-size:25px;
@@ -80,7 +80,7 @@ input{
 }
 
 .formSumitBasicCheck{
-    width: 200px;
+    width: 20%;
     cursor: pointer;
     margin-top: 30px;
     font-size:25px;
@@ -245,12 +245,37 @@ tfoot {
 }
 
 @media screen and (max-width: 600px){
+    body, html{
+        padding: 0px;
+        margin: 0px;
+        width: 95%;
+    }
     .nav-frame h1{
         font-size: 30px;
+        
+    }
+    .form-frame input{
+        width: 90%;
+
+    }
+    #root{
+        margin: auto;
+        padding: 0px;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .nav-frame{
+        background-color: wheat;
+        width: 100%;
+        position: fixed;
+        top:0px;
+        left: 0px;
     }
     .form-frame{
+        width: 95%;
         margin:300px 10px 10px 10px;
-        /* border: white 5px solid; */
         font-family: sans-serif;
         font-size: 27px;
         font-style: normal;
@@ -263,25 +288,86 @@ tfoot {
         flex-direction: column;
         justify-content:space-between;
     }
-    table{
-        margin: auto;
-        line-height: 30px;
-        width: 100%;
-        flex-wrap: wrap;
-        border-collapse: collapse;
-        overflow-x: auto;
+    table, thead, tbody, th, td, tr {
         display: block;
-        border-spacing: 0;
     }
-    table,td {
-        padding: 20px;
-        font-size:25px;
-        border: 1px solid #333;
+
+    thead tr {
+        display: none;
+    }
+ 
+
+    tr:nth-child(odd) {
+        background: #ccc;
+      }
+    td {
+        /* Behave  like a "row" */
+        border:1px solid rgb(177, 159, 159);
+        position: relative;
+        vertical-align: middle;
+        line-height: 100px;
+        width: 100%;
+        /* border:1px solid rebeccapurple; */
+
+
+    }
+    td:nth-of-type(1):before { 
+        content: "序號"; 
+    }
+
+    td:nth-of-type(2):before { 
+        content: "委託單位"; 
+    }
+    td:nth-of-type(3):before { 
+        content: "產源地址"; 
+    }
+    td:nth-of-type(4):before { 
+        content: "產源電話"; 
+    }
+    td:nth-of-type(5):before { 
+        content: "數量預估(桶數)"; 
+    }
+    td:nth-of-type(6):before { 
+        content: "委託者(產源)簽章"; 
+    }
+    td:nth-of-type(7):before { 
+        content: "刪除"; 
+    }
+
+    td:before{
+        position: absolute;
+        top: -25px;
+        left: 20px;
+        width: 90%;
+        white-space: nowrap;
+
+    }
+    .myForm{
+        margin: auto;
+        width: 100%;
+        
+    }
+    .myForm table{
+        border: none;
     }
     .formSumit{
-        width: 90%;
-        overflow-x: auto;
         margin:auto;
+        width: 90%;
+        border: 1px solid rgb(14, 12, 9);
     }
+    hr{
+        width: 90%;
+    }
+    .formSumitBasic{
+        width: 200px;
+    }
+    .Result{
+        margin:300px 10px 10px 10px;
+
+    }
+    .blank i{
+        font-size: 50vw;
+    }
+
 }
 

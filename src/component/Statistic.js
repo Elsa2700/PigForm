@@ -4,7 +4,7 @@ import React from 'react';
 const Statistic = ({ onClickYes,onClickNo, check, handleFormButtonClick }) => {
 
     return (
-        <div className='myForm'>
+        <div className='myFormBtn'>
             <div className='Statistic'>
                 {check ? (
                     <div>
