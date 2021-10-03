@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+<h1 align='center'>桃園市廚餘清運紀錄表單小工具</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### 主網站連結：https://pigapp-waste.firebaseapp.com/
 
-## Available Scripts
 
-In the project directory, you can run:
+### 桃園市廚餘清運紀錄表單小工具核心功能介紹
+<hr>
+    - 協助桃園市廚餘資源化清運紀錄表單，建立載運聯單資料和呈現數據。
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 行動法規本的專案，具備以下功能：
+<hr>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 1. 首頁頁面
 
-### `npm test`
+    - 使用者清運來源基本資訊(建立單號、清運機構、日期時間、人員等等)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![image alt](https://raw.githubusercontent.com/Elsa2700/test/master/%E8%81%AF%E5%96%AE.JPG)
 
-### `npm run build`
+    - 使用者點擊新增記錄，各項建立收受產源的紀錄資訊
+![image alt](https://raw.githubusercontent.com/Elsa2700/test/master/%E5%BB%9A%E9%A4%98%E9%87%8F.JPG)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 2. 顯示記錄成果頁面
+    - 點擊顯示紀錄結果頁面，顯示目前除於進場家數、車次、車次編號、總量資訊
+    - 各進場車次編號聯單可點擊查詢詳細資訊
 
-### `npm run eject`
+![image alt](https://raw.githubusercontent.com/Elsa2700/test/master/%E7%B5%B1%E8%A8%88.JPG)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    - 查詢聯單紀錄，顯示單號基本和各產源資訊
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![image alt](https://raw.githubusercontent.com/Elsa2700/test/master/%E7%B5%B1%E8%A8%88_%E5%9F%BA%E6%9C%AC.JPG)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![image alt](https://raw.githubusercontent.com/Elsa2700/test/master/%E7%B5%B1%E8%A8%88_%E7%94%A2%E6%BA%90.JPG)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 開發技術
+<hr/>
+<ul>
+    <li>React Framework</li>
+    <li>JavaScript</li>
+    <li>CSS</li>
+    <li>SPA</li>
+    <li>Datetime</li>
+    <li>scroll</li>
+</ul>
+<ul>
+    <li>Firebase
+        <ul>
+            <li>Firebase Storage</li>
+            <li>Firebase Authentication</li>
+            <li>Firebase Hosting</li>
+        </ul>
+    </li>
+</ul>
+<ul>
+    <li>Responsive Web Design</li>
+</ul>

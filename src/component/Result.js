@@ -6,6 +6,19 @@ import ResultData from './ResultData';
 const Result = () => {
     const [result, setResult] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [navScroll, setNavScroll] =useState(false);
+
+    useEffect(() => {
+        const onScroll = () => {
+            if(window.scrollY > 200){
+                setNavScroll(true);
+            }else{
+                setNavScroll(false);
+            }
+        };
+        window.addEventListener("scroll", onScroll);
+    
+      },[]);
 
 
 
@@ -30,7 +43,7 @@ const Result = () => {
 
     return (
         <>
-            <Nav />
+            <Nav navScroll={navScroll}/>
             {isLoading ? (<div>載入中...</div>) : (
                 <ResultData result={result} isLoading={isLoading} />
             )}

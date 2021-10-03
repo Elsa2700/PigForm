@@ -17,7 +17,6 @@ const HomePage = () => {
 
   useEffect(() => {
     const onScroll = () => {
-        console.log(window.scrollY)
         if(window.scrollY > 200){
             setNavScroll(true);
         }else{
@@ -99,8 +98,6 @@ const HomePage = () => {
         e.preventDefault();
         setCheck(true);
         console.log(checked);
-
-        //資料庫存取
 
     }
 

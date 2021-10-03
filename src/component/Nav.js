@@ -2,7 +2,6 @@ import React from 'react';
 import {Link} from "react-router-dom";
 
 const Nav = ({navScroll})=>{
-    console.log('123',navScroll)
     return(
         <div className={navScroll? 'off':'' }>
         <div className='nav-frame' >
