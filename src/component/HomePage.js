@@ -11,22 +11,22 @@ import moment from 'moment';
 
 const HomePage = () => {
     const [isSubmit, setSubmit] = useState(false);
-    const [check, setCheck] =useState(false);
-    const [checked, setChecked] =useState(false);
-    const [navScroll, setNavScroll] =useState(false);
+    const [check, setCheck] = useState(false);
+    const [checked, setChecked] = useState(false);
+    const [navScroll, setNavScroll] = useState(false);
 
-  useEffect(() => {
-    const onScroll = () => {
-        if(window.scrollY > 200){
-            setNavScroll(true);
-        }else{
-            setNavScroll(false);
-        }
-    };
-    window.addEventListener("scroll", onScroll);
+    useEffect(() => {
+        const onScroll = () => {
+            if (window.scrollY > 200) {
+                setNavScroll(true);
+            } else {
+                setNavScroll(false);
+            }
+        };
+        window.addEventListener("scroll", onScroll);
 
-  },[]);
-    
+    }, []);
+
     const [todos, setTodos] = useState([
         {
             id: 1,
@@ -60,7 +60,7 @@ const HomePage = () => {
 
     const addRecordData = (carForm, todos) => {
 
-        if(Object.values(carForm[0]).includes(undefined && '')){
+        if (Object.values(carForm[0]).includes(undefined && '')) {
             alert('請填寫所有基本資料');
             window.location.reload();
         }
@@ -78,21 +78,21 @@ const HomePage = () => {
             });
     }
 
-    const checkYes = () =>{
+    const checkYes = () => {
         setChecked(true);
-        if(Object.values(todos[0]).includes(undefined || '')){
+        if (Object.values(todos[0]).includes(undefined || '')) {
             alert('請填寫所有資料');
-        }else{
+        } else {
             addRecordData(carForm, todos);
         }
-        
-        
+
+
     }
-    const checkNo = () =>{
+    const checkNo = () => {
         setChecked(false);
         return
     }
-    
+
 
     const handleFormButtonClick = (e) => {
         e.preventDefault();
@@ -187,7 +187,7 @@ const HomePage = () => {
 
     return (
         <div>
-            <Nav navScroll={navScroll}/>
+            <Nav navScroll={navScroll} />
             <Header value={value} isSubmit={isSubmit}
                 handleInputCarBasicChange={handleInputCarBasicChange}
                 handleInputentrytimeChange={handleInputentrytimeChange}

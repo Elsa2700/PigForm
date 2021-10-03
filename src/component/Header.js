@@ -10,7 +10,7 @@ const Header = ({
     handleCarBasicButtonClick,
     isSubmit }) => {
 
-    
+
 
     return (
         <>
@@ -79,11 +79,11 @@ const Header = ({
                     </label>
                 </div>
                 <div>
-                    
-                    {isSubmit?(<input className='formSumitBasicCheck' type='submit' isSubmit={isSubmit} value='資料已更新' />):(
-                    <input className='formSumitBasic' type='submit' isSubmit={isSubmit} value='儲存基本資料' onClick={handleCarBasicButtonClick} />
-                )}
-                    
+
+                    {isSubmit ? (<input className='formSumitBasicCheck' type='submit' isSubmit={isSubmit} value='資料已更新' />) : (
+                        <input className='formSumitBasic' type='submit' isSubmit={isSubmit} value='儲存基本資料' onClick={handleCarBasicButtonClick} />
+                    )}
+
                 </div>
             </form>
 

@@ -5,13 +5,13 @@ import ResultDataForm from './ResultDataForm';
 const ResultData = ({ result }) => {
     const [EntryID, setEntryID] = useState('');
     const [BucketSum, setBucketSum] = useState(0);
-  
-  
+
+
     const calcu = () => {
         let BucketCount = 0;
         result.forEach(buckets => {
-            buckets.formContent.forEach(bucket =>{
-                if(!isNaN(parseFloat(bucket.bucketCount))){
+            buckets.formContent.forEach(bucket => {
+                if (!isNaN(parseFloat(bucket.bucketCount))) {
                     BucketCount += parseFloat(bucket.bucketCount);
                 }
             })
@@ -49,8 +49,8 @@ const ResultData = ({ result }) => {
                         <i className="inbox icon"></i>
                     </div>) : (
                     <div>
-                        <ResultDataBasic  result={result} EntryID={EntryID} />
-                        <ResultDataForm  result={result} EntryID={EntryID} />
+                        <ResultDataBasic result={result} EntryID={EntryID} />
+                        <ResultDataForm result={result} EntryID={EntryID} />
                     </div>)}
             </div>
         </div>

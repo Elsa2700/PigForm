@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const Statistic = ({ onClickYes,onClickNo, check, handleFormButtonClick }) => {
+const Statistic = ({ onClickYes, onClickNo, check, handleFormButtonClick }) => {
 
     return (
         <div className='myFormBtn'>
